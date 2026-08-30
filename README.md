@@ -53,7 +53,7 @@ void calc_conv(int* len1, int* len2)
     
     // Defining filter
     for (j = 0; j < *len2; j++) {
-        h[j] = sinc_normalized(j*w);
+        h[j] = (w/pi)*sinc_normalized(j*w);
     }
 
     for (n = 0; n < l; n++) {
